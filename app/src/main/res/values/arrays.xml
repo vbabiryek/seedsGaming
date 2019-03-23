@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <string-array name="devlight">
+            <item>#F0907F</item>
+            <item>#F07A65</item>
+            <item>#76E1D4</item>
+            <item>#FFC300</item>
+            <item>#FFC300</item>
+        </string-array>
+
+        <string-array name="bg">
+            <item>#a3a3a3</item>
+            <item>#bbbbbb</item>
+            <item>#cccccc</item>
+            <item>#dddddd</item>
+            <item>#dddddd</item>
+        </string-array>
+
+        <string-array name="polluted_waves">
+            <item>#a3a3a3</item>
+            <item>#bbbbbb</item>
+            <item>#cccccc</item>
+            <item>#dddddd</item>
+            <item>#dddddd</item>
+        </string-array>
+
+        <string-array name="medical_express">
+            <item>#4D84D8</item>
+            <item>#36C88A</item>
+            <item>#E8677A</item>
+            <item>#E2A81A</item>
+            <item>#0D8C3F</item>
+        </string-array>
+</resources>
