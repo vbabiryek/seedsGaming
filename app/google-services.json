@@ -1,0 +1,86 @@
+{
+  "project_info": {
+    "project_number": "54904085699",
+    "firebase_url": "https://sweetseeds-edcf2.firebaseio.com",
+    "project_id": "sweetseeds-edcf2",
+    "storage_bucket": "sweetseeds-edcf2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:54904085699:android:5e780c8edf6485ee",
+        "android_client_info": {
+          "package_name": "com.example.vivianbabiryekulumba.gnomeswellgame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "54904085699-nvc83nd3fut4ren4cm0r47ovkfdjbh44.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqzNE2qJniOoJPFrI8f02uUYXeYWOAnMU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:54904085699:android:24980984ff05cec7",
+        "android_client_info": {
+          "package_name": "com.example.vivianbabiryekulumba.ssappmarkupone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "54904085699-3d33v53e1koveo3scjunlu6gm9ft0bj8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.vivianbabiryekulumba.ssappmarkupone",
+            "certificate_hash": "96df10a7aaa06ebcc458e62f90c38692385582d5"
+          }
+        },
+        {
+          "client_id": "54904085699-nvc83nd3fut4ren4cm0r47ovkfdjbh44.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqzNE2qJniOoJPFrI8f02uUYXeYWOAnMU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "54904085699-nvc83nd3fut4ren4cm0r47ovkfdjbh44.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
