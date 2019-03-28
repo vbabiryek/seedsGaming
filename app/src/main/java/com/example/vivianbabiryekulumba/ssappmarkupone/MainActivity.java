@@ -19,6 +19,11 @@ public class MainActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        GamesFrag gamesFrag = new GamesFrag();
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.container, gamesFrag);
+        transaction.commit();
+
         bottomNav = findViewById(R.id.bottom_nav);
 
         bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {

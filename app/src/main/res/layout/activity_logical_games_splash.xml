@@ -17,7 +17,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:text="TAP INTO YOUR LOGIC : )"
+        android:text="LOGICAL GAMES"
         android:textSize="30sp"
         android:textStyle="bold"
         android:textColor="#F3C1CB"
