@@ -6,6 +6,7 @@ import android.os.Debug;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -16,17 +17,21 @@ import android.widget.Toast;
 import com.example.vivianbabiryekulumba.ssappmarkupone.models.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class AuthActivity extends Activity {
 
-//    private ProgressBar progressBar;
+    //    private ProgressBar progressBar;
+    final String TAG = "AuthActivity";
     private FirebaseAuth mAuth;
     private EditText emailEditText, passwordEditText;
     Button registerUser;
     Button loginUser;
+    Task task;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,28 +60,28 @@ public class AuthActivity extends Activity {
     protected void onStart() {
         super.onStart();
 
-        if(mAuth.getCurrentUser() != null){
+        if (mAuth.getCurrentUser() != null) {
             //handle the already logged in user
         }
     }
 
-//    private void signInUser(){
-//        mAuth.signInWithEmailAndPassword(emailEditText, passwordEditText)
-////        mAuth.SignInWithEmailAndPasswordAsync(email, password).ContinueWith(task => {
-////        if (task.IsCanceled) {
-////            Debug("SignInWithEmailAndPasswordAsync was canceled.");
-////            return;
-////        }
-////        if (task.IsFaulted) {
-////            Debug.LogError("SignInWithEmailAndPasswordAsync encountered an error: " + task.Exception);
-////            return;
-////        }
-////
-////        Firebase.Auth.FirebaseUser newUser = task.Result;
-////        Debug.LogFormat("User signed in successfully: {0} ({1})",
-////                newUser.DisplayName, newUser.UserId);
-////});
-//    }
+    private void signInUser() {
+
+        final String email = emailEditText.getText().toString().trim();
+        final String password = passwordEditText.getText().toString().trim();
+
+        mAuth.signInWithEmailAndPassword(email, password);
+        if(task.isCanceled()){
+            Log.e(TAG, "SignInWithEmailAndPasswordAsync was cancelled.");
+            return;
+        }
+        if(!task.isSuccessful()) {
+            Log.e(TAG, "SignInWithEmailAndPasswordAsync encountered an error: " + task.getException());
+            return;
+        }else{
+            Toast.makeText(AuthActivity.this, "User successfully signed in!", Toast.LENGTH_LONG).show();
+        }
+    }
 
     private void registerUser() {
         final String email = emailEditText.getText().toString().trim();
