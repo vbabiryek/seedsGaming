@@ -28,6 +28,7 @@ public class AuthActivity extends Activity {
     //    private ProgressBar progressBar;
     final String TAG = "AuthActivity";
     private FirebaseAuth mAuth;
+    FirebaseUser user;
     private EditText emailEditText, passwordEditText;
     Button registerUser;
     Button loginUser;
@@ -54,6 +55,13 @@ public class AuthActivity extends Activity {
             }
         });
 
+        loginUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                signInUser();
+            }
+        });
+
     }
 
     @Override
@@ -70,17 +78,17 @@ public class AuthActivity extends Activity {
         final String email = emailEditText.getText().toString().trim();
         final String password = passwordEditText.getText().toString().trim();
 
-        mAuth.signInWithEmailAndPassword(email, password);
-        if(task.isCanceled()){
-            Log.e(TAG, "SignInWithEmailAndPasswordAsync was cancelled.");
-            return;
-        }
-        if(!task.isSuccessful()) {
-            Log.e(TAG, "SignInWithEmailAndPasswordAsync encountered an error: " + task.getException());
-            return;
-        }else{
-            Toast.makeText(AuthActivity.this, "User successfully signed in!", Toast.LENGTH_LONG).show();
-        }
+        mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if(task.isSuccessful()){
+                    Log.d(TAG, "signInWithEmail:success");
+                    user = mAuth.getCurrentUser();
+                    Intent intentToMainMenu = new Intent(AuthActivity.this, MainActivity.class);
+                    startActivity(intentToMainMenu);
+                }
+            }
+        });
     }
 
     private void registerUser() {
