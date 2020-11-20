@@ -3,12 +3,9 @@ package com.example.vivianbabiryekulumba.ssappmarkupone.splash;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
-
 import com.example.vivianbabiryekulumba.ssappmarkupone.AuthActivity;
-import com.example.vivianbabiryekulumba.ssappmarkupone.LListGamesActivity;
 import com.example.vivianbabiryekulumba.ssappmarkupone.R;
 
 public class AppOpeningSplash extends Activity {
