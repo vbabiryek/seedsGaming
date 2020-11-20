@@ -1,6 +1,6 @@
 package com.example.vivianbabiryekulumba.ssappmarkupone.models;
 
-import android.arch.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModel;
 
 public class ProgressBadge extends ViewModel {
 
