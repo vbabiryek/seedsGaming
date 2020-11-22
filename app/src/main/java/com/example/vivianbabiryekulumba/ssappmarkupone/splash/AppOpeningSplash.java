@@ -6,6 +6,7 @@ import android.os.Handler;
 import android.os.Bundle;
 import android.widget.TextView;
 import com.example.vivianbabiryekulumba.ssappmarkupone.AuthActivity;
+import com.example.vivianbabiryekulumba.ssappmarkupone.MainActivity;
 import com.example.vivianbabiryekulumba.ssappmarkupone.R;
 
 public class AppOpeningSplash extends Activity {
@@ -23,7 +24,7 @@ public class AppOpeningSplash extends Activity {
         new Handler().postDelayed(new Runnable(){
             @Override
             public void run() {
-                Intent mainIntent = new Intent(AppOpeningSplash.this, AuthActivity.class);
+                Intent mainIntent = new Intent(AppOpeningSplash.this, MainActivity.class);
                 startActivity(mainIntent);
                 finish();
             }
